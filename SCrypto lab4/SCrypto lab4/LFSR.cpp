@@ -14,7 +14,7 @@ uint8_t LFSR::step() {
             new_bit ^= (poly >> i) & 1;
         }
     }
-    state = (state >> 1) | (new_bit << (size - 1));
+    state = (state >> 1) | (new_bit << (size));
     return result;
 }
 
